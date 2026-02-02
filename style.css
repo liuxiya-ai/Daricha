@@ -1,0 +1,142 @@
+/* Base Reset & Typography */
+:root {
+    --bg-color: #F5F5F0; /* Off-white paper */
+    --text-color: #1A1A1A; /* Near black */
+    --card-bg: #FFFFFF;
+    --border-color: #000000;
+    --accent-green: #2ecc71;
+    --accent-red: #e74c3c;
+    --font-primary: system-ui, -apple-system, sans-serif;
+    --font-arabic: 'Tahoma', 'Arial', sans-serif; /* Fallback for Dari */
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-primary);
+    margin: 0;
+    padding: 20px;
+    line-height: 1.5;
+}
+
+/* Header Layout */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    border-bottom: 2px solid var(--text-color);
+    padding-bottom: 20px;
+}
+
+.logo-area h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.logo-area .subtitle {
+    font-family: var(--font-arabic);
+    font-size: 1.5rem;
+    display: block;
+    margin-top: -5px;
+}
+
+/* Status Indicators */
+.status-area {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.offline-indicator {
+    font-size: 0.8rem;
+    color: #27ae60;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background-color: #27ae60;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.panic-button {
+    background-color: white;
+    color: var(--accent-red);
+    border: 1px solid var(--accent-red);
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+/* Card Grid */
+.container {
+    display: grid;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.card {
+    background: var(--card-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.1s active;
+    box-shadow: 4px 4px 0px rgba(0,0,0,0.1);
+}
+
+.card:active {
+    transform: scale(0.98);
+    box-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+}
+
+.icon {
+    font-size: 2.5rem;
+}
+
+.text-content h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.local-text {
+    font-family: var(--font-arabic);
+    font-size: 1.2rem;
+    color: #555;
+    direction: rtl; /* Right to left for Dari */
+    display: block;
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 0.9rem;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+}
+
+footer a {
+    color: #666;
+    text-decoration: none;
+}
